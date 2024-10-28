@@ -10,6 +10,7 @@ public class Scissors : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
+    private Vector3 dragPosition; // Stores the position where the mouse was released
 
     public void Awake()
     {
@@ -42,25 +43,28 @@ public class Scissors : MonoBehaviour
         }
     }
 
+    public void OnMouseDrag()
+    {
+        // Update dragPosition with the mouse's position in world coordinates, without moving the scissors
+        dragPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        dragPosition.z = 0; // Ensure dragPosition is on the 2D plane
+    }
+
     public void OnMouseUp()
     {
         if (rb != null)
         {
-            Vector2 springForce = (Initial_Pos - transform.position) * Scissor_Speed;
+            // Calculate spring force based on the difference between the initial position and the drag end position
+            Vector2 springForce = (Initial_Pos - dragPosition) * Scissor_Speed;
+
             if (spriteRenderer != null)
             {
                 spriteRenderer.color = Color.red;
             }
-            rb.gravityScale = 1;
-            rb.AddForce(springForce);
-        }
-    }
 
-    public void OnMouseDrag()
-    {
-        Vector3 dragPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        dragPosition.z = 0; // Ensure the object stays on the 2D plane
-        transform.position = dragPosition;
+            rb.gravityScale = 1;
+            rb.AddForce(springForce); // Apply the calculated force to the Rigidbody
+        }
     }
 
     void Update()
@@ -92,9 +96,11 @@ public class Scissors : MonoBehaviour
 
     private void ResetScissors()
     {
-        // Reset position, velocity, gravity, and color
+        // Reset position, rotation, linearVelocity, gravity, and color
         transform.position = Initial_Pos;
-        rb.velocity = Vector2.zero;
+        transform.rotation = Quaternion.identity; // Reset rotation to its original orientation
+        rb.linearVelocity = Vector2.zero;        // Reset linear velocity
+        rb.angularVelocity = 0f;                 // Reset angular velocity to prevent spinning
         rb.gravityScale = 0;
 
         if (spriteRenderer != null)
