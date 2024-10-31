@@ -8,9 +8,9 @@ public class GameTimer : MonoBehaviour
     private float elapsedTime;
     private bool isRunning;
 
-    void Start() {
-        timerText = GetComponent<TextMeshProUGUI>();
-    }
+    // void Start() {
+    //     timerText = GetComponent<TextMeshProUGUI>();
+    // }
 
     private void OnEnable()
     {
@@ -19,7 +19,7 @@ public class GameTimer : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.StateChanged += OnGameStateChanged;
+        GameManager.StateChanged -= OnGameStateChanged;
     }
 
     private void Update()
