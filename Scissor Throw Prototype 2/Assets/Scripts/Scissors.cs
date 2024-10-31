@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 public class Scissors : MonoBehaviour
 {
     public Vector3 Initial_Pos;
-    public int Scissor_Speed;
-    public string Scene_Name;
+
+    [SerializeField]
+    private int Scissor_Speed;
+    [SerializeField]
+    private string Scene_Name;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
