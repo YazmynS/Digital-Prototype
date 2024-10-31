@@ -1001,7 +1001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &560548157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,8 +1309,8 @@ MonoBehaviour:
   bounceGravity: 5
   bounceRotationSpeed: 20
   isStuck: 0
---- !u!61 &588725636
-BoxCollider2D:
+--- !u!60 &588725636
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1343,18 +1343,24 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.68, y: 1.1773659}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
-    newSize: {x: 3.2, y: 3.2}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.27, y: 0.82}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.152678, y: 1.405103}
+      - {x: 1.8659251, y: 1.5809551}
+      - {x: 0.06657692, y: 0.3665372}
+      - {x: 0.66502494, y: -0.030941721}
+      - {x: 2.113636, y: 1.3254151}
+  m_UseDelaunayMesh: 0
 --- !u!1 &825331345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1228587805
 MonoBehaviour:
   m_ObjectHideFlags: 0
