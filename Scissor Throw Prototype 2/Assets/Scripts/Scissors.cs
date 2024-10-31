@@ -58,7 +58,7 @@ public class Scissors : MonoBehaviour
         if (rb != null)
         {
             // Calculate spring force based on the difference between the initial position and the drag end position
-            Vector2 springForce = (Initial_Pos - dragPosition) * Scissor_Speed;
+            Vector2 springForce = (transform.position - dragPosition) * Scissor_Speed;
 
             if (spriteRenderer != null)
             {
