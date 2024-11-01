@@ -87,10 +87,10 @@ public class Scissors : MonoBehaviour
         float cameraWidth = cameraHeight * mainCamera.aspect;
 
         // Calculate boundaries
-        float leftBound = mainCamera.transform.position.x - cameraWidth / 2;
-        float rightBound = mainCamera.transform.position.x + cameraWidth / 2;
-        float topBound = mainCamera.transform.position.y + cameraHeight / 2;
-        float bottomBound = mainCamera.transform.position.y - cameraHeight / 2;
+        float leftBound = mainCamera.transform.position.x - cameraWidth;
+        float rightBound = mainCamera.transform.position.x + cameraWidth;
+        float topBound = mainCamera.transform.position.y + cameraHeight;
+        float bottomBound = mainCamera.transform.position.y - cameraHeight / 3;
 
         // Check if scissors are out of bounds
         return transform.position.x < leftBound || transform.position.x > rightBound ||
