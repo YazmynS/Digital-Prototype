@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 87866704}
   m_Layer: 0
   m_Name: Wall_3 (3)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,13 +283,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87866702}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0035295438, y: 0.0074793613, z: -0.6616902, w: -0.74973184}
-  m_LocalPosition: {x: -14.1462, y: 18.4338, z: 0.1314}
+  m_LocalRotation: {x: -0.0024075392, y: 0.007912155, z: -0.5459658, w: -0.83776665}
+  m_LocalPosition: {x: -16.3, y: 17.5, z: 0.1314}
   m_LocalScale: {x: 1.0665001, y: 9.716158, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371532279}
-  m_LocalEulerAnglesHint: {x: 0.87, y: -0.375, z: -277.142}
+  m_LocalEulerAnglesHint: {x: 0.726, y: -0.609, z: -293.82}
 --- !u!61 &87866704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 187157747}
   m_Layer: 0
   m_Name: Wall_3 (11)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 217432744}
   m_Layer: 0
   m_Name: Wall_3 (6)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 301027880}
   m_Layer: 0
   m_Name: Wall_3 (5)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 462195302}
   m_Layer: 0
   m_Name: Wall_3
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 511325595}
   m_Layer: 0
   m_Name: Wall_3 (2)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1759,6 +1759,7 @@ GameObject:
   - component: {fileID: 588725634}
   - component: {fileID: 588725635}
   - component: {fileID: 588725636}
+  - component: {fileID: 588725637}
   m_Layer: 0
   m_Name: Scissors
   m_TagString: Untagged
@@ -1990,8 +1991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 15
-  bounceGravity: 5
-  bounceRotationSpeed: 20
+  bounceGravity: 15
+  bounceRotationSpeed: 22
   isStuck: 0
 --- !u!60 &588725636
 PolygonCollider2D:
@@ -2041,9 +2042,61 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.152678, y: 1.405103}
       - {x: 1.8659251, y: 1.5809551}
-      - {x: 0.06657692, y: 0.3665372}
-      - {x: 0.66502494, y: -0.030941721}
+      - {x: 1.0457215, y: 1.0360279}
+      - {x: 1.4793688, y: 0.7014624}
       - {x: 2.113636, y: 1.3254151}
+  m_UseDelaunayMesh: 0
+--- !u!60 &588725637
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588725629}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.0167208, y: 1.4358708}
+      - {x: -1.8282683, y: 1.2201629}
+      - {x: -1.3486087, y: 0.7368}
+      - {x: -0.8574679, y: 1.0061648}
+      - {x: -1.695892, y: 1.5724105}
   m_UseDelaunayMesh: 0
 --- !u!1 &697545242
 GameObject:
@@ -2058,7 +2111,7 @@ GameObject:
   - component: {fileID: 697545244}
   m_Layer: 0
   m_Name: Wall_3 (12)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2131,6 +2184,140 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697545242}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.3254902, g: 0.43137258, b: 0.18039216, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &730912180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730912181}
+  - component: {fileID: 730912183}
+  - component: {fileID: 730912182}
+  m_Layer: 0
+  m_Name: Wall_3 (14)
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &730912181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730912180}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0017868812, y: 0.008075011, z: -0.5575111, w: -0.8301283}
+  m_LocalPosition: {x: -3.12, y: 25.03, z: 0.33}
+  m_LocalScale: {x: 1.0665001, y: 4.2972097, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371532279}
+  m_LocalEulerAnglesHint: {x: 0.686, y: -0.654, z: -292.234}
+--- !u!61 &730912182
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730912180}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &730912183
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730912180}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2396,7 +2583,7 @@ GameObject:
   - component: {fileID: 952280264}
   m_Layer: 0
   m_Name: Wall_3 (8)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2530,7 +2717,7 @@ GameObject:
   - component: {fileID: 1010311244}
   m_Layer: 0
   m_Name: Wall_3 (4)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2664,7 +2851,7 @@ GameObject:
   - component: {fileID: 1072712512}
   m_Layer: 0
   m_Name: Wall_2
-  m_TagString: rightWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2934,7 +3121,7 @@ GameObject:
   - component: {fileID: 1227209901}
   m_Layer: 0
   m_Name: Wall_3 (10)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3304,6 +3491,7 @@ Transform:
   - {fileID: 1758586744}
   - {fileID: 217432743}
   - {fileID: 952280263}
+  - {fileID: 730912181}
   - {fileID: 2094047547}
   - {fileID: 1227209900}
   - {fileID: 697545243}
@@ -3606,7 +3794,7 @@ GameObject:
   - component: {fileID: 1758586745}
   m_Layer: 0
   m_Name: Wall_3 (7)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3776,7 +3964,7 @@ GameObject:
   - component: {fileID: 2016906300}
   m_Layer: 0
   m_Name: Wall_3 (13)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3910,7 +4098,7 @@ GameObject:
   - component: {fileID: 2046268288}
   m_Layer: 0
   m_Name: Wall_3 (1)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4044,7 +4232,7 @@ GameObject:
   - component: {fileID: 2094047548}
   m_Layer: 0
   m_Name: Wall_3 (9)
-  m_TagString: leftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4171,6 +4359,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 122655730}
   - {fileID: 519420032}
-  - {fileID: 1371532279}
   - {fileID: 588725631}
+  - {fileID: 1371532279}
   - {fileID: 825331348}
