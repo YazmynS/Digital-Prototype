@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void pauseHandler() {
+    public void pauseHandler() {  
         if (GameManager.Instance.State == GameManager.GameState.Pause)
             {
                 Resume();
@@ -41,7 +41,7 @@ public class MainMenu : MonoBehaviour
             MenuUI.SetActive(false);
     }
 
-    public void Restart() {
+    public void Restart() { // Resets scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
