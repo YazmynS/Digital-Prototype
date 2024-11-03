@@ -10,6 +10,8 @@ public class Scissors : MonoBehaviour
     [SerializeField]
     private string Scene_Name;
 
+    public int spinSpeed;
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
@@ -67,6 +69,9 @@ public class Scissors : MonoBehaviour
 
             rb.gravityScale = 1;
             rb.AddForce(springForce); // Apply the calculated force to the Rigidbody
+                                      // Apply torque to spin the asset
+
+            rb.AddTorque(spinSpeed, ForceMode2D.Force); // Added to spin the scissors when dragged
         }
     }
 
