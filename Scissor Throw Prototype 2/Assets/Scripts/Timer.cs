@@ -32,7 +32,7 @@ public class GameTimer : MonoBehaviour
         isRunning = newState == GameManager.GameState.Play;
     }
 
-    private void UpdateTimerUI()
+    private void UpdateTimerUI()    // divides elapsed time into minutes and seconds
     {
         int mins = Mathf.FloorToInt(elapsedTime / 60F);
         int secs = Mathf.FloorToInt(elapsedTime % 60F);
